@@ -8,11 +8,12 @@ const pages = require("./testPages")
 
 const PORT = 8080
 const HOST = "0.0.0.0"
+const credentials = require("./loginCredentials")
 
 const app = express()
 
 app.get("/", (req, res) => {
-  runBlinkDiff()
+  runBlinkDiff("signin")
   res.send("Hello world\n")
 })
 
@@ -25,6 +26,7 @@ app.get("/run", (req, res) => {
       let page = pages["signin"]
       return driver.get("https://" + page)
         .then(_ => takeScreenshot(driver, "signin"))
+        .then(_ => driver.findElement(By.id("user_email")).sendKeys(credentials["email"]))
         .then(_ => runBlinkDiff("signin"))
         .then(_ => driver.quit())
     })
