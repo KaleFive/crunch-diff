@@ -16,6 +16,9 @@ app.get("/", (req, res) => {
   res.send("Hello world\n")
 })
 
+app.get("/nightwatch", (req, res) => {
+}
+
 app.get("/run", (req, res) => {
   new Builder()
     .forBrowser("chrome")
