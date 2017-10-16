@@ -13,6 +13,7 @@
     "express": "^4.13.3",
     "fs": "0.0.1-security",
     "geckodriver": "^1.9.0",
+    "nightwatch": "^0.9.16",
     "node-inspector": "^1.1.1",
     "selenium-webdriver": "^3.5.0"
   }
