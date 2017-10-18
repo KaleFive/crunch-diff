@@ -5,6 +5,7 @@
   "custom_assertions_path" : "",
   "page_objects_path" : "",
   "globals_path" : "",
+  "live_output": true,
 
   "selenium" : {
     "start_process" : false,
@@ -17,10 +18,9 @@
       "webdriver.edge.driver" : ""
     }
   },
-
   "test_workers": {
     "enabled": true,
-    "workers": 5
+    "workers": 4
   },
   "test_settings" : {
     "default" : {
@@ -35,7 +35,7 @@
       "desiredCapabilities": {
         "browserName": "chrome",
         "chromeOptions": {
-          "args": ["window-size=1400,1400", "disable-web-security", "test-type"]
+          "args": ["--headless"]
         }
       }
     }
