@@ -29,7 +29,10 @@
         "path" : ""
       },
       "desiredCapabilities": {
-        "browserName": "chrome"
+        "browserName": "chrome",
+        "chromeOptions": {
+          "args": ["window-size=1400,1400", "disable-web-security", "test-type"]
+        }
       }
     }
   }
