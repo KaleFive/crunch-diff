@@ -20,7 +20,7 @@
   },
   "test_workers": {
     "enabled": true,
-    "workers": 4
+    "workers": "auto"
   },
   "test_settings" : {
     "default" : {
@@ -34,8 +34,9 @@
       },
       "desiredCapabilities": {
         "browserName": "chrome",
+        "javascriptEnabled": true,
         "chromeOptions": {
-          "args": ["--headless"]
+          "args": ["window-size=1400,1400"]
         }
       }
     }

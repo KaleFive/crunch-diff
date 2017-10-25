@@ -4,7 +4,8 @@ const blinkDiff = require("blink-diff")
 const geckodriver = require("geckodriver")
 const {Builder, By, Key, until} = require("selenium-webdriver")
 const fs = require("fs")
-const pages = require("./testPages")
+// const pages = require("./testPages")
+// deleted ^
 
 const PORT = 8080
 const HOST = "0.0.0.0"
