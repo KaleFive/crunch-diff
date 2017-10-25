@@ -1,9 +1,13 @@
+let helper = require("../helper")
+
 module.exports = {
   "Portfolio page" : function (browser) {
+    helper.signin(browser)
     browser
-      .url("http://kimleung2.contently.com/")
-      .waitForElementVisible("body", 1000)
-      .saveScreenshot("./Screenshots/new/portfolio_page.png")
+      .useXpath()
+      .click("//a[text()='Portfolio']")
+      .useCss()
+      .saveScreenshot("./Screenshots/new/initial_page.png")
       .end();
   }
 }
