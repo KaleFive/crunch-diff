@@ -2,9 +2,10 @@
 const express = require("express")
 const blinkDiff = require("blink-diff")
 const geckodriver = require("geckodriver")
-const {Builder, By, until} = require("selenium-webdriver")
+const {Builder, By, Key, until} = require("selenium-webdriver")
 const fs = require("fs")
-const pages = require("./testPages")
+// const pages = require("./testPages")
+// deleted ^
 
 const PORT = 8080
 const HOST = "0.0.0.0"
@@ -12,8 +13,11 @@ const HOST = "0.0.0.0"
 const app = express()
 
 app.get("/", (req, res) => {
-  runBlinkDiff()
   res.send("Hello world\n")
+})
+
+app.get("/nightwatch", (req, res) => {
+  res.send("Hello nightwatch\n")
 })
 
 app.get("/run", (req, res) => {
