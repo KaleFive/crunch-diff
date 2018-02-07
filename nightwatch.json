@@ -36,7 +36,7 @@
         "browserName": "chrome",
         "javascriptEnabled": true,
         "chromeOptions": {
-          "args": ["window-size=1400,1400"]
+          "args": ["window-size=1400,1400", "--headless"]
         }
       }
     }
