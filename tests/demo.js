@@ -3,7 +3,7 @@ module.exports = {
     browser
       .url("http://www.google.com")
       .waitForElementVisible("body", 1000)
-      // .saveScreenshot("./Screenshots/new/google_page.png")
+      .saveScreenshot("./Screenshots/new/google_page.png")
       // .setValue("input[type=text]", "nightwatch")
       // .waitForElementVisible("input[value='Google Search']", 1000)
       // .click("input[value='Google Search']")
