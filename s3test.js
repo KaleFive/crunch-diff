@@ -3,14 +3,19 @@ const fs = require('fs')
 
 function uploadToS3() {
   let ssPath = "./Screenshots/new/cnn_page.png"
-  fs.readFile(ssPath, 'utf8', function (err,data) {
+  fs.readFile(ssPath, function (err,data) {
     if (err) {
       return console.log(err);
     }
-    console.log("Inside read file metod");
+    let imageStream = fs.createReadStream(ssPath)
     let myBucket = 'kalefive.unique.bucket.name';
-    let myKey = 'myBucketKey';
-    let params = {Bucket: myBucket, Key: myKey, Body: data, ACL: 'public-read', ContentType: data.mimetype};
+    let myKey = 'qa/' + 'cnnImage.png';
+    let params = {
+      Bucket: myBucket,
+      Key: myKey,
+      Body: imageStream,
+      ACL: 'public-read',
+    };
     s3.putObject(params)
   });
 };
