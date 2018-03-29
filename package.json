@@ -8,6 +8,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "aws-sdk": "^2.216.1",
     "blink-diff": "^1.0.13",
     "chromedriver": "^2.33.0",
     "express": "^4.13.3",
