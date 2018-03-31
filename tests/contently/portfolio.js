@@ -7,7 +7,7 @@ module.exports = {
       .useXpath()
       .click("//a[text()='Portfolio']")
       .useCss()
-      .saveScreenshot("./Screenshots/new/initial_page.png")
+      .saveScreenshot("./screenshots/new/initial_page.png")
       .end();
   }
 }

@@ -3,7 +3,7 @@ module.exports = {
     browser
       .url("https://www.nytimes.com")
       .waitForElementVisible("body", 1000)
-      .saveScreenshot("./Screenshots/new/NYTimes_page.png")
+      .saveScreenshot("./screenshots/new/NYTimes_page.png")
       // .pause(1000)
       .end();
   }

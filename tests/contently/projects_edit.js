@@ -5,12 +5,12 @@ module.exports = {
     helper.signin(browser)
     browser
       .url("http://www.contently.com/portfolio/projects")
-      .saveScreenshot("./Screenshots/new/projects/initial_page.png")
+      .saveScreenshot("./screenshots/new/projects/initial_page.png")
       .click("#projects .js-projects-list .js-toggle-collapsible")
-      .saveScreenshot("./Screenshots/new/projects/project_show.png")
+      .saveScreenshot("./screenshots/new/projects/project_show.png")
       .click("#projects .js-projects-list .js-toggle-collapsible")
       .click("#projects .js-projects-list .js-edit-project")
-      .saveScreenshot("./Screenshots/new/projects/project_edit.png")
+      .saveScreenshot("./screenshots/new/projects/project_edit.png")
       .end();
   }
 }

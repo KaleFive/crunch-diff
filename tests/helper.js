@@ -11,5 +11,5 @@ function Signin(browser) {
     .click("button[type=submit]")
     .setValue("input[type=password]", loginCredentials["password"])
     .click("button[type=submit]")
-    .saveScreenshot("./Screenshots/new/signin_complete.png")
+    .saveScreenshot("./screenshots/new/signin_complete.png")
 }
