@@ -1,4 +1,4 @@
-let loginCredentials = require("../loginCredentials")
+let variables = require("../variables")
 
 module.exports = {
   "signin": Signin
@@ -7,9 +7,9 @@ module.exports = {
 function Signin(browser) {
   browser
     .url("http://www.contently.com/signin")
-    .setValue("input[type=email]", loginCredentials["email"])
+    .setValue("input[type=email]", variables["email"])
     .click("button[type=submit]")
-    .setValue("input[type=password]", loginCredentials["password"])
+    .setValue("input[type=password]", variables["password"])
     .click("button[type=submit]")
     .saveScreenshot("./screenshots/new/signin_complete.png")
 }
