@@ -1,5 +1,3 @@
-// const s3 = require("./tests/s3")
-// const fs = require('fs')
 //
 // function uploadToS3() {
 //   let ssPath = "./Screenshots/new/cnn_page.png"
@@ -20,37 +18,6 @@
 //   });
 // };
 // uploadToS3()
-
-let AWS = require('aws-sdk');
-let s3 = new AWS.S3();
-
-const fs = require('fs')
-
-function uploadScreenshotToS3(page) {
-  console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<< Inside of Upload >>>>>>>>>>>>>>>>>>>>>>>>>>>")
-  let branchName = "qa"
-  let key = branchName + "/" + page
-  let diffPath = "./screenshots/" + key
-  return new Promise(function(resolve, reject) {
-    fs.readFile(diffPath, function (err,data) {
-      if (err) {
-        return console.log(err);
-      }
-      let imageStream = fs.createReadStream(diffPath)
-      let params = {
-        Bucket: "kalefive.unique.bucket.name",
-        Key: key,
-        Body: imageStream,
-        ACL: 'public-read'
-      };
-      console.log("inside the promise")
-      s3.putObject(params, function() {
-        console.log("right before resolve")
-        resolve()
-      });
-    });
-  });
-};
 
 // Bulk upload whole directory to S3
 // https://gist.github.com/jlouros/9abc14239b0d9d8947a3345b99c4ebcb
