@@ -5,7 +5,6 @@ module.exports = {
 
     browser
       .url("https://www.cnn.com")
-      .waitForElementVisible("body", 1000)
       .saveScreenshot("screenshots/" + variables["branch"] + "/cnnHomepage.png")
       .pause(500)
       .uploadScreenshot("screenshots/" + variables["branch"] + "/cnnHomepage.png")
