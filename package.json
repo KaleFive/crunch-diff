@@ -5,7 +5,9 @@
   "author": "Kalefive",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "compose": "docker-compose up --scale chrome=1",
+    "specs": "./node_modules/.bin/nightwatch tests/visualRegression"
   },
   "dependencies": {
     "aws-sdk": "^2.283.1",

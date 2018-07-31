@@ -11,4 +11,4 @@ Run `npm install` to install your dependencies.
 Run `docker-compose up --scale chrome=1` to start the service, or any number of chrome drivers you want running.
 Recommended that you do not exceed the number of cpu cores you have on your machine.
 
-Run `./node_modules/.bin/nightwatch [test]` such as `tests/contently/portfolio.js` to run specs.
+Run `./node_modules/.bin/nightwatch tests/visualRegression/`

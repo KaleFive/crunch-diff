@@ -12,3 +12,13 @@ chrome:
     HUB_PORT_4444_TCP_PORT: 4444
   volumes:
     - /dev/shm:/dev/shm
+
+# webapp:
+#   image: crunch-diff/v1
+#   links:
+#     - selenium-hub:app
+#   environment:
+#     HUB_PORT_8080_TCP_ADDR: hub
+#     HUB_PORT_8080_TCP_PORT: 8080
+#   volumes:
+#     - /dev/shm:/dev/shm
